@@ -1,2 +1,3 @@
 # LoftHouse
-Лендинг жилого комплекса. html + scss + js + grib + bem
+
+Лендинг жилого комплекса. html + scss + js + grid + bem
