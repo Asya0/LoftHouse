@@ -109,4 +109,20 @@ legend {
 
 body {
   font-family: "Raleway", sans-serif;
+  background-color: #242b33;
+  color: #fff;
+  font-size: 16px;
+}
+
+a {
+  color: #fff;
+  transition: color 0.2s ease-in;
+}
+a:hover {
+  color: #d4c17f;
+}
+
+.header {
+  min-height: 840px;
+  background: linear-gradient(180deg, rgb(36, 43, 51) 11.979%, rgba(45, 52, 60, 0.38) 51.042%, rgb(36, 43, 51) 92.188%), url("./../img/header/header-bg.jpeg");
 }/*# sourceMappingURL=main.css.map */
