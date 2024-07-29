@@ -1,4 +1,10 @@
 .header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 30px 0 74px 0;
+
   min-height: 840px;
   background: linear-gradient(
       180deg,
@@ -7,4 +13,32 @@
       rgb(36, 43, 51) 92.188%
     ),
     url("./../img/header/header-bg.jpeg");
+}
+
+.header__top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-title {
+  position: relative;
+  color: $accent;
+  font-family: $font-accent;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 64px;
+  text-align: center;
+  padding-bottom: 121px;
+}
+.header__title-icon {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50% 0%);
+}
+
+.header__footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
 }
