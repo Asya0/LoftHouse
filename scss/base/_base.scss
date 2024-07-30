@@ -17,10 +17,28 @@ a {
 }
 
 .container {
-  width: 1140px;
+  max-width: 1140px;
   padding: 0 15px;
   margin: 0 auto;
+
+  &--sm {
+    max-width: 840px;
+  }
 }
 .text-right {
   text-align: right;
+}
+// скрыть заголовок не удаляя его
+.visually-hidden {
+  height: 1px;
+  overflow: hidden;
+  width: 1px;
+
+  position: absolute;
+
+  clip: rect(1px 1px 1px 1px); /*ie6, ie7*/
+  clip: rect(1px 1px 1px 1px);
+  clip-path: inset(50%);
+
+  white-space: nowrap;
 }
