@@ -1,0 +1,30 @@
+.cta {
+  padding: 188px 0;
+  background: linear-gradient(180deg, $dark, #242b33, #242b33, #242b33e6),
+    url("./../img/cta/cta-bg.jpeg"), #c4c4c4;
+}
+
+.cta__title {
+  margin-bottom: 17px;
+}
+
+.cta__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+.cta__text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+
+  //   если будет больше текста, то добавим отступы
+  p + p {
+    margin-top: 1em;
+  }
+}
+.cta__form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px 30px;
+}

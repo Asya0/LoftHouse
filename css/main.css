@@ -318,4 +318,73 @@ a:hover {
   color: #fff;
   font-size: 24px;
   line-height: 28px;
+}
+
+.cta {
+  padding: 188px 0;
+  background: linear-gradient(180deg, #242b33, #242b33, #242b33, rgba(36, 43, 51, 0.9019607843)), url("./../img/cta/cta-bg.jpeg"), #c4c4c4;
+}
+
+.cta__title {
+  margin-bottom: 17px;
+}
+
+.cta__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.cta__text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.cta__text p + p {
+  margin-top: 1em;
+}
+
+.cta__form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px 30px;
+}
+
+.forn__input {
+  height: 50px;
+  padding: 12px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 14px;
+  transition: background-color 0.2s ease-in;
+}
+.forn__input::-moz-placeholder {
+  color: #bebebe;
+}
+.forn__input::placeholder {
+  color: #bebebe;
+}
+.forn__input:focus {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.form__privacy {
+  color: rgb(231, 231, 231);
+  font-size: 13px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.23;
+}
+
+.form__btn {
+  font-size: 16px;
+  height: 50px;
+  background-color: #d4c17f;
+  padding: 12px;
+  font-weight: 700;
+  transition: background-color 0.2s ease-in;
+}
+.form__btn:hover {
+  background-color: #ddc676;
 }/*# sourceMappingURL=main.css.map */
