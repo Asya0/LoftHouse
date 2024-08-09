@@ -1,11 +1,26 @@
 .benefits {
-  padding: 120px 0;
+  position: relative;
+  padding-top: 120px;
+
+  &::after {
+    content: "II";
+
+    position: absolute;
+    top: 0;
+    left: calc(50% + 555px);
+    // 550px - половина ширины контейнера
+    transform: translate(-50%, 0);
+
+    opacity: 0.02;
+    font-family: $font-accent;
+
+    font-size: 400px;
+    line-height: 0.6;
+  }
 }
 
 .benefits__row {
   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
   column-gap: 70px;
 }
 .benefits__item {

@@ -1,4 +1,21 @@
 .apartments {
+  position: relative;
+  padding-top: 120px;
+
+  &::before {
+    content: "III";
+
+    position: absolute;
+    top: 140px;
+    right: calc(50% + 555px);
+    // 550px - половина ширины контейнера
+    transform: translate(50%, 0);
+
+    opacity: 0.02;
+    font-family: $font-accent;
+
+    font-size: 400px;
+  }
 }
 .apartments__title {
   margin-bottom: 88px;
