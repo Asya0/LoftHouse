@@ -5,17 +5,13 @@
   &::after {
     content: "II";
 
-    position: absolute;
-    top: 0;
     left: calc(50% + 555px);
     // 550px - половина ширины контейнера
     transform: translate(-50%, 0);
 
-    opacity: 0.02;
-    font-family: $font-accent;
-
-    font-size: 400px;
     line-height: 0.6;
+
+    @include decorNumber;
   }
 }
 

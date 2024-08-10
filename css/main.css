@@ -243,14 +243,14 @@ a:hover {
 }
 .benefits::after {
   content: "II";
-  position: absolute;
-  top: 0;
   left: calc(50% + 555px);
   transform: translate(-50%, 0);
+  line-height: 0.6;
+  position: absolute;
+  top: 0;
   opacity: 0.02;
   font-family: "Playfair Display", sans-serif;
   font-size: 400px;
-  line-height: 0.6;
 }
 
 .benefits__row {
@@ -280,13 +280,14 @@ a:hover {
 }
 .apartments::before {
   content: "III";
-  position: absolute;
-  top: 140px;
   right: calc(50% + 555px);
   transform: translate(50%, 0);
+  position: absolute;
+  top: 0;
   opacity: 0.02;
   font-family: "Playfair Display", sans-serif;
   font-size: 400px;
+  top: 140px;
 }
 
 .apartments__title {
@@ -428,10 +429,10 @@ a:hover {
 }
 .video::after {
   content: "IV";
-  position: absolute;
-  top: 0;
   left: calc(50% + 555px);
   transform: translate(-50%, 0);
+  position: absolute;
+  top: 0;
   opacity: 0.02;
   font-family: "Playfair Display", sans-serif;
   font-size: 400px;
@@ -475,14 +476,15 @@ a:hover {
 }
 .section-map::before {
   content: "V";
-  position: absolute;
-  top: 140px;
   right: calc(50% + 555px);
   transform: translate(50%, 0);
+  z-index: -1;
+  position: absolute;
+  top: 0;
   opacity: 0.02;
   font-family: "Playfair Display", sans-serif;
   font-size: 400px;
-  z-index: -1;
+  top: 140px;
 }
 
 .section-map__title {
