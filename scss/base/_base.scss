@@ -51,6 +51,10 @@ a {
   font-size: 36px;
   font-weight: 700;
   line-height: 48px;
+
+  @include mediaTablet {
+    font-size: 28px;
+  }
 }
 
 .link-bold {
