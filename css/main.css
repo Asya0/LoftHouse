@@ -383,7 +383,7 @@ a:hover {
 .benefits {
   position: relative;
   padding-top: 120px;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 .benefits::after {
   content: "II";
@@ -395,6 +395,11 @@ a:hover {
   opacity: 0.02;
   font-family: "Playfair Display", sans-serif;
   font-size: 400px;
+}
+@media screen and (max-width: 959px) {
+  .benefits {
+    overflow-x: hidden;
+  }
 }
 
 .benefits__row {
@@ -538,6 +543,11 @@ a:hover {
   padding: 188px 0;
   background: linear-gradient(180deg, #242b33, #242b33, #242b33, rgba(36, 43, 51, 0.9019607843)), url("./../img/cta/cta-bg.jpeg"), #c4c4c4;
 }
+@media screen and (max-width: 959px) {
+  .cta {
+    padding: 60px 0;
+  }
+}
 
 .cta__title {
   margin-bottom: 17px;
@@ -548,6 +558,11 @@ a:hover {
   grid-template-columns: 1fr 1fr;
   gap: 30px;
 }
+@media screen and (max-width: 959px) {
+  .cta__wrapper {
+    grid-template-columns: 1fr;
+  }
+}
 
 .cta__text {
   font-size: 16px;
@@ -557,11 +572,21 @@ a:hover {
 .cta__text p + p {
   margin-top: 1em;
 }
+@media screen and (max-width: 959px) {
+  .cta__text {
+    font-size: 14px;
+  }
+}
 
 .cta__form {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 35px 30px;
+}
+@media screen and (max-width: 959px) {
+  .cta__form {
+    grid-template-columns: 1fr;
+  }
 }
 
 .forn__input {
@@ -590,6 +615,11 @@ a:hover {
   text-align: center;
   line-height: 1.23;
 }
+@media screen and (max-width: 959px) {
+  .form__privacy--bottom {
+    grid-row: 4/5;
+  }
+}
 
 .form__btn {
   font-size: 16px;
@@ -606,6 +636,7 @@ a:hover {
 .video {
   position: relative;
   text-align: center;
+  overflow: hidden;
 }
 .video::after {
   content: "IV";
@@ -648,6 +679,12 @@ a:hover {
   left: 50%;
   transform: translate(-50%, -50%);
   transition: all 0.2s ease-in;
+}
+@media screen and (max-width: 959px) {
+  .video__icon {
+    width: 80px;
+    height: 80px;
+  }
 }
 
 .section-map {
