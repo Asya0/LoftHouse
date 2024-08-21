@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./libs/libs/youtubeLightbox/youtubeLightbox.css" />
   </head>
   <body>
     <header class="header none">
@@ -188,11 +189,12 @@
           </div>
         </div>
       </section>
-      <section class="video none">
+      <section class="video none1">
         <div class="container">
           <h2 class="visually-hidden">video</h2>
           <a
             href="https://www.youtube.com/watch?v=bhJNL9JUsnY"
+            data-youtubeLightbox
             class="video__link"
           >
             <img src="./img/video/play.svg" alt="" class="video__icon" />
@@ -302,8 +304,17 @@
         </div>
       </div>
     </footer>
+
+    <div id="youtubelightbox" class="youtubelightbox">
+      <div class="youtubelightbox__centerchild">
+        <div class="youtubelightbox__videowrapper">
+          <div id="youtubelightboxPlayer"></div>
+        </div>
+      </div>
+    </div>
     <script src="./libs/libs/phoneMask/mask.js"></script>
     <script src="./libs/libs/phoneMask/mask_list.js"></script>
+    <script src="./libs/libs/youtubeLightbox/youtubeLightbox.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>
