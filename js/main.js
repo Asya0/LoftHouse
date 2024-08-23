@@ -25,46 +25,118 @@ phoneInputs.forEach((input) => {
 
 /* Yandex Map */
 
-// Функция ymaps.ready() будет вызвана, когда
-// загрузятся все компоненты API, а также когда будет готово DOM-дерево.
-ymaps.ready(init);
-function init() {
-  // Создание карты.
-  var map = new ymaps.Map("map", {
-    center: [59.943543, 30.338928],
-    zoom: 7,
-  });
+// ymaps.ready(init);
+// function init() {
+//   // Создание карты.
+//   var map = new ymaps.Map("map", {
+//     center: [59.943543, 30.338928],
+//     zoom: 7,
+//   });
 
-  var myPlacemark = new ymaps.Placemark(
-    [59.943543, 30.338928],
+//   var myPlacemark = new ymaps.Placemark(
+//     [59.943543, 30.338928],
+//     {
+//       balloonContent: `
+// 				<div class="balloon">
+// 					<div class="balloon__address">Наб. реки Фонтанки 10-15</div>
+// 					<div class="balloon__contacts">
+// 						<a href="tel:+78121234567">+8 (812) 123-45-67</a>
+// 					</div>
+// 				</div>
+// 			`,
+//     },
+//     {
+//       iconLayout: "default#image",
+//       iconImageHref: "./img/map/location-pin.svg",
+//       iconImageSize: [40, 40],
+//       iconImageOffset: [-20, -40],
+//     }
+//   );
+
+//   //   map.controls.remove("geolocationControl"); // удаляем геолокацию
+//   //   map.controls.remove("searchControl"); // удаляем поиск
+//   //   map.controls.remove("trafficControl"); // удаляем контроль трафика
+//   //   map.controls.remove("typeSelector"); // удаляем тип
+
+//   //   // map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
+//   //   // map.controls.remove('zoomControl'); // удаляем контрол зуммирования
+//   //   map.controls.remove("rulerControl"); // удаляем контрол правил
+//   //   map.behaviors.disable(["scrollZoom"]); // отключаем скролл карты (опционально)
+
+//   map.geoObjects.add(myPlacemark);
+//   myPlacemark.balloon.open();
+// }
+
+initMap();
+
+async function initMap() {
+  await ymaps3.ready;
+
+  const { YMap, YMapDefaultSchemeLayer, YMapMarker } = ymaps3;
+
+  // Иницилизация карты
+  const map = new YMap(
+    // Передаём ссылку на HTMLElement контейнера
+    document.getElementById("map"),
+
+    // Передаём параметры инициализации карты
     {
-      balloonContent: `
-				<div class="balloon">
-					<div class="balloon__address">Наб. реки Фонтанки 10-15</div>
-					<div class="balloon__contacts">
-						<a href="tel:+78121234567">+8 (812) 123-45-67</a>
-					</div>
-				</div>
-			`,
-    },
-    {
-      iconLayout: "default#image",
-      iconImageHref: "./img/map/location-pin.svg",
-      iconImageSize: [40, 40],
-      iconImageOffset: [-20, -40],
+      location: {
+        center: [30.313915, 59.931377],
+        zoom: 16,
+      },
     }
   );
 
-  //   map.controls.remove("geolocationControl"); // удаляем геолокацию
-  //   map.controls.remove("searchControl"); // удаляем поиск
-  //   map.controls.remove("trafficControl"); // удаляем контроль трафика
-  //   map.controls.remove("typeSelector"); // удаляем тип
+  // Добавляем слой для отображения схематической карты
+  map.addChild(new YMapDefaultSchemeLayer());
 
-  //   // map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
-  //   // map.controls.remove('zoomControl'); // удаляем контрол зуммирования
-  //   map.controls.remove("rulerControl"); // удаляем контрол правил
-  //   map.behaviors.disable(["scrollZoom"]); // отключаем скролл карты (опционально)
+  initMap();
 
-  map.geoObjects.add(myPlacemark);
-  myPlacemark.balloon.open();
+  async function initMap() {
+    await ymaps3.ready;
+
+    const { YMap, YMapDefaultSchemeLayer, YMapMarker } = ymaps3;
+
+    // Иницилизация карты
+    const map = new YMap(document.getElementById("map"), {
+      location: {
+        center: [59.931377, 30.313915],
+        zoom: 16,
+      },
+    });
+
+    // Добавляем слой для отображения схематической карты
+    map.addChild(new YMapDefaultSchemeLayer());
+
+    // Создаём HTML-элемент для маркера
+    const markerElement = document.createElement("div");
+    markerElement.className = "marker-class";
+    markerElement.innerText = "I'm marker!";
+
+    // Создаём маркер
+    const marker = new YMapMarker(
+      {
+        coordinates: [59.931377, 30.313915],
+        draggable: true,
+        mapFollowsOnDrag: true,
+        balloonContent: `
+          <div class="balloon">
+            <div class="balloon__address">Наб. реки Фонтанки 10-15</div>
+            <div class="balloon__contacts">
+              <a href="tel:+78121234567">+8 (812) 123-45-67</a>
+            </div>
+          </div>
+        `,
+        iconLayout: "default#image",
+        iconImageHref: "./img/map/location-pin.svg",
+        iconImageSize: [40, 40],
+        iconImageOffset: [-20, -40],
+      },
+      markerElement
+    );
+
+    // Добавляем маркер на карту
+    map.addChild(marker);
+  }
 }
